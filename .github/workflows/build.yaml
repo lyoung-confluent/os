@@ -29,7 +29,7 @@ jobs:
     # permissions:
 
     container:
-      image: ghcr.io/wolfi-dev/sdk:latest@sha256:773e310f92525bb5da5352374fe525cf739209d255557ca291532b6d4489e992
+      image: ghcr.io/wolfi-dev/sdk:latest@sha256:b1fa7ba0b6bfd5350e666ffd0af4d3ef52b1f16b18f253952c181ca44a4dd901
       # TODO: Deprivilege
       options: |
         --cap-add NET_ADMIN --cap-add SYS_ADMIN --device /dev/fuse --security-opt seccomp=unconfined --security-opt apparmor:unconfined
@@ -102,7 +102,7 @@ jobs:
 
     container:
       # NOTE: This step only signs and uploads, so it doesn't need any privileges
-      image: ghcr.io/wolfi-dev/sdk:latest@sha256:773e310f92525bb5da5352374fe525cf739209d255557ca291532b6d4489e992
+      image: ghcr.io/wolfi-dev/sdk:latest@sha256:b1fa7ba0b6bfd5350e666ffd0af4d3ef52b1f16b18f253952c181ca44a4dd901
 
     steps:
       - uses: actions/checkout@v3
